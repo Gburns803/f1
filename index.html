@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 Updates</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #e10600;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: #333;
+            padding: 1rem;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #e10600;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+        .main-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .sidebar {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #e10600;
+            border-bottom: 2px solid #e10600;
+            padding-bottom: 0.5rem;
+        }
+        .news-item, .standings, .schedule, .profiles {
+            margin-bottom: 1.5rem;
+        }
+        .news-item h3 {
+            margin: 0.5rem 0;
+        }
+        .news-item a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+            text-align: left;
+        }
+        table th {
+            background-color: #e10600;
+            color: white;
+        }
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .signup-form input {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .signup-form button {
+            background-color: #e10600;
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .signup-form button:hover {
+            background-color: #b80500;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Formula 1 Updates</h1>
+        <p>Your source for the latest F1 news, standings, and more!</p>
+    </header>
+    <nav>
+        <a href="#news">News</a>
+        <a href="#standings">Standings</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#next-race">Next Race</a>
+        <a href="#profiles">Driver Profiles</a>
+    </nav>
+    <div class="container">
+        <div class="main-content">
+            <section id="news" class="news">
+                <h2>Latest News</h2>
+                <div id="news-container"></div>
+            </section>
+            <section id="standings" class="standings">
+                <h2>Championship Standings</h2>
+                <h3>Constructors' Championship</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Team</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>McLaren</td><td>460</td></tr>
+                        <tr><td>2</td><td>Ferrari</td><td>222</td></tr>
+                        <tr><td>3</td><td>Mercedes</td><td>210</td></tr>
+                        <tr><td>4</td><td>Red Bull</td><td>172</td></tr>
+                        <tr><td>5</td><td>Williams</td><td>59</td></tr>
+                        <tr><td>6</td><td>Sauber</td><td>41</td></tr>
+                        <tr><td>7</td><td>Racing Bulls</td><td>36</ full><td>8</td><td>Aston Martin</td><td>36</td></tr>
+                        <tr><td>9</td><td>Haas</td><td>29</td></tr>
+                        <tr><td>10</td><td>Alpine</td><td>19</td></tr>
+                    </tbody>
+                </table>
+                <h3>Drivers' Championship</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Driver</th>
+                            <th>Team</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Oscar Piastri</td><td>McLaren</td><td>234</td></tr>
+                        <tr><td>2</td><td>Lando Norris</td><td>McLaren</td><td>226</td></tr>
+                        <tr><td>3</td><td>Max Verstappen</td><td>Red Bull</td><td>165</td></tr>
+                        <tr><td>4</td><td>George Russell</td><td>Mercedes</td><td>147</td></tr>
+                        <tr><td>5</td><td>Lewis Hamilton</td><td>Ferrari</td><td>132</td></tr>
+                        <tr><td>6</td><td>Nico Hulkenberg</td><td>Sauber</td><td>41</td></tr>
+                        <tr><td>7</td><td>Kimi Antonelli</td><td>Mercedes</td><td>39</td></tr>
+                        <tr><td>8</td><td>Lance Stroll</td><td>Aston Martin</td><td>24</td></tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="schedule" class="schedule">
+                <h2>Race Schedule</h2>
+                <ul>
+                    <li><strong>Belgian Grand Prix</strong> - Spa-Francorchamps, July 25-27, 2025</li>
+                    <li><strong>Hungarian Grand Prix</strong> - Hungaroring, August 1-3, 2025</li>
+                    <li><strong>Dutch Grand Prix</strong> - Zandvoort, August 29-31, 2025</li>
+                    <li><strong>Italian Grand Prix</strong> - Monza, September 5-7, 2025</li>
+                    <!-- Add more races as needed -->
+                </ul>
+            </section>
+            <section id="next-race" class="next-race">
+                <h2>Next Race: Belgian Grand Prix</h2>
+                <p><strong>Date:</strong> July 25-27, 2025</p>
+                <p><strong>Track:</strong> Spa-Francorchamps</p>
+                <p><strong>Performance Expectations:</strong> McLaren is expected to be strong due to their superior rear tire temperature management and high-downforce setup, ideal for Spa's long straights and technical corners. Ferrari and Mercedes could challenge, with Hamilton historically performing well here. Red Bull may struggle unless upgrades improve their pace.</p>[](https://racer.com/2025/07/14/why-f1-teams-face-some-painful-development-trade-offs)[](https://www.f1oversteer.com/news/)
+            </section>
+        </div>
+        <div class="sidebar">
+            <section id="x-feed" class="x-feed">
+                <h2>Live X Feed</h2>
+                <p>Follow #F1 on X for real-time updates:</p>
+                <!-- Placeholder for X feed widget -->
+                <div id="x-feed-container">Loading X feed...</div>
+            </section>
+            <section id="profiles" class="profiles">
+                <h2>Driver Profiles</h2>
+                <div class="profile">
+                    <h3>Lando Norris</h3>
+                    <p>Team: McLaren<br>Recent Highlight: Won the 2025 Austrian and British Grands Prix, closing the gap to Piastri.</p>[](https://www.f1oversteer.com/)[](https://www.sportingnews.com/us/formula-1/standings)
+                </div>
+                <div class="profile">
+                    <h3>Oscar Piastri</h3>
+                    <p>Team: McLaren<br>Recent Highlight: Leads the drivers' championship by 8 points after strong 2025 performances.</p>[](https://www.sportingnews.com/us/formula-1/standings)
+                </div>
+                <div class="profile">
+                    <h3>Max Verstappen</h3>
+                    <p>Team: Red Bull<br>Recent Highlight: Secured pole at the British Grand Prix but faces challenges with team performance.</p>[](https://www.express.co.uk/sport/f1-autosport)
+                </div>
+            </section>
+            <section class="signup">
+                <h2>Stay Updated</h2>
+                <form class="signup-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </section>
+        </div>
+    </div>
+    <script>
+        // Sample news data (replace with API call for live data)
+        const newsData = [
+            {
+                title: "McLaren Dominates British Grand Prix in Wet Conditions",
+                source: "The Athletic",
+                url: "https://www.nytimes.com",
+                description: "Lando Norris won a compelling British Grand Prix in horrendous conditions at Silverstone, with McLaren securing a strong team result."[](https://nytimes.com/athletic/live-blogs/f1-british-gp-live-updates-race-times-results/7sxnVCmwA6ug/b9BcIVnF8Q46)
+            },
+            {
+                title: "Sauber Climbs to Sixth in Constructors' Championship",
+                source: "BBC Sport",
+                url: "https://www.bbc.com",
+                description: "Sauber's recent performance surge, led by Nico Hulkenberg, has seen them become the fourth-highest scoring team since Spain."[](https://www.bbc.com/sport/formula1/articles/cgmwp1yjr41o)
+            },
+            {
+                title: "Williams Targets Points at British Grand Prix",
+                source: "F1 Oversteer",
+                url: "https://www.f1oversteer.com",
+                description: "Alex Albon finished P8 in a rain-soaked Silverstone, boosting Williams' midfield battle."[](https://www.f1oversteer.com/)
+            }
+        ];
+
+        // Clickbait filter
+        const clickbaitKeywords = ['shock', 'scandal', 'brutally', 'frenzy', 'chaos', 'slapped'];
+
+        function filterNews(news) {
+            return news.filter(item => {
+                const titleLower = item.title.toLowerCase();
+                return !clickbaitKeywords.some(keyword => titleLower.includes(keyword));
+            });
+        }
+
+        // Display news
+        function displayNews() {
+            const newsContainer = document.getElementById('news-container');
+            const filteredNews = filterNews(newsData);
+            newsContainer.innerHTML = filteredNews.map(item => `
+                <div class="news-item">
+                    <h3>${item.title}</h3>
+                    <p>${item.description}</p>
+                    <p><a href="${item.url}" target="_blank">Read more at ${item.source}</a></p>
+                </div>
+            `).join('');
+        }
+
+        // Simulated X feed (replace with X API widget)
+        function loadXFeed() {
+            const xFeedContainer = document.getElementById('x-feed-container');
+            xFeedContainer.innerHTML = `
+                <p>Sample X posts about #F1:</p>
+                <ul>
+                    <li>@F1Fan: McLaren's pace at Silverstone was unreal! 🏎️ #F1</li>
+                    <li>@RacingNews: What's next for Red Bull after Horner's exit? #F1</li>
+                </ul>
+                <p><a href="https://x.com/hashtag/F1" target="_blank">View more on X</a></p>
+            `;
+        }
+
+        // Form submission
+        document.querySelector('.signup-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Subscribed! You will receive F1 updates.');
+        });
+
+        // Initialize page
+        displayNews();
+        loadXFeed();
+    </script>
+</body>
+</html>
