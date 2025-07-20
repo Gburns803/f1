@@ -108,6 +108,12 @@
         .signup-form button:hover {
             background-color: #b80500;
         }
+        .track-diagram img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
         @media (max-width: 768px) {
             .container {
                 grid-template-columns: 1fr;
@@ -151,32 +157,14 @@
                         <tr><td>4</td><td>Red Bull</td><td>172</td></tr>
                         <tr><td>5</td><td>Williams</td><td>59</td></tr>
                         <tr><td>6</td><td>Sauber</td><td>41</td></tr>
-                        <tr><td>7</td><td>Racing Bulls</td><td>36</ full><td>8</td><td>Aston Martin</td><td>36</td></tr>
+                        <tr><td>7</td><td>Racing Bulls</td><td>36</td></tr>
+                        <tr><td>8</td><td>Aston Martin</td><td>36</td></tr>
                         <tr><td>9</td><td>Haas</td><td>29</td></tr>
                         <tr><td>10</td><td>Alpine</td><td>19</td></tr>
                     </tbody>
                 </table>
                 <h3>Drivers' Championship</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Position</th>
-                            <th>Driver</th>
-                            <th>Team</th>
-                            <th>Points</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>1</td><td>Oscar Piastri</td><td>McLaren</td><td>234</td></tr>
-                        <tr><td>2</td><td>Lando Norris</td><td>McLaren</td><td>226</td></tr>
-                        <tr><td>3</td><td>Max Verstappen</td><td>Red Bull</td><td>165</td></tr>
-                        <tr><td>4</td><td>George Russell</td><td>Mercedes</td><td>147</td></tr>
-                        <tr><td>5</td><td>Lewis Hamilton</td><td>Ferrari</td><td>132</td></tr>
-                        <tr><td>6</td><td>Nico Hulkenberg</td><td>Sauber</td><td>41</td></tr>
-                        <tr><td>7</td><td>Kimi Antonelli</td><td>Mercedes</td><td>39</td></tr>
-                        <tr><td>8</td><td>Lance Stroll</td><td>Aston Martin</td><td>24</td></tr>
-                    </tbody>
-                </table>
+                <div id="standings-data"></div>
             </section>
             <section id="schedule" class="schedule">
                 <h2>Race Schedule</h2>
@@ -185,36 +173,38 @@
                     <li><strong>Hungarian Grand Prix</strong> - Hungaroring, August 1-3, 2025</li>
                     <li><strong>Dutch Grand Prix</strong> - Zandvoort, August 29-31, 2025</li>
                     <li><strong>Italian Grand Prix</strong> - Monza, September 5-7, 2025</li>
-                    <!-- Add more races as needed -->
                 </ul>
             </section>
             <section id="next-race" class="next-race">
                 <h2>Next Race: Belgian Grand Prix</h2>
                 <p><strong>Date:</strong> July 25-27, 2025</p>
                 <p><strong>Track:</strong> Spa-Francorchamps</p>
-                <p><strong>Performance Expectations:</strong> McLaren is expected to be strong due to their superior rear tire temperature management and high-downforce setup, ideal for Spa's long straights and technical corners. Ferrari and Mercedes could challenge, with Hamilton historically performing well here. Red Bull may struggle unless upgrades improve their pace.</p>[](https://racer.com/2025/07/14/why-f1-teams-face-some-painful-development-trade-offs)[](https://www.f1oversteer.com/news/)
+                <p><strong>Performance Expectations:</strong> McLaren is expected to be strong due to their superior rear tire temperature management and high-downforce setup, ideal for Spa's long straights and technical corners. Ferrari and Mercedes could challenge, with Hamilton historically performing well here. Red Bull may struggle unless upgrades improve their pace.</p>
+                <div class="track-diagram">
+                    <img src="https://motorsporttickets.com/blog/wp-content/uploads/2024/01/Belgium-Stats-1536x860.png" alt="Spa-Francorchamps Track Diagram">
+                    <p><em>Track diagram of Spa-Francorchamps (Source: Motorsport Tickets)</em></p>
+                </div>
             </section>
         </div>
         <div class="sidebar">
             <section id="x-feed" class="x-feed">
                 <h2>Live X Feed</h2>
                 <p>Follow #F1 on X for real-time updates:</p>
-                <!-- Placeholder for X feed widget -->
                 <div id="x-feed-container">Loading X feed...</div>
             </section>
             <section id="profiles" class="profiles">
                 <h2>Driver Profiles</h2>
                 <div class="profile">
                     <h3>Lando Norris</h3>
-                    <p>Team: McLaren<br>Recent Highlight: Won the 2025 Austrian and British Grands Prix, closing the gap to Piastri.</p>[](https://www.f1oversteer.com/)[](https://www.sportingnews.com/us/formula-1/standings)
+                    <p>Team: McLaren<br>Recent Highlight: Won the 2025 Austrian and British Grands Prix, closing the gap to Piastri.</p>
                 </div>
                 <div class="profile">
                     <h3>Oscar Piastri</h3>
-                    <p>Team: McLaren<br>Recent Highlight: Leads the drivers' championship by 8 points after strong 2025 performances.</p>[](https://www.sportingnews.com/us/formula-1/standings)
+                    <p>Team: McLaren<br>Recent Highlight: Leads the drivers' championship by 8 points after strong 2025 performances.</p>
                 </div>
                 <div class="profile">
                     <h3>Max Verstappen</h3>
-                    <p>Team: Red Bull<br>Recent Highlight: Secured pole at the British Grand Prix but faces challenges with team performance.</p>[](https://www.express.co.uk/sport/f1-autosport)
+                    <p>Team: Red Bull<br>Recent Highlight: Secured pole at the British Grand Prix but faces challenges with team performance.</p>
                 </div>
             </section>
             <section class="signup">
@@ -233,19 +223,19 @@
                 title: "McLaren Dominates British Grand Prix in Wet Conditions",
                 source: "The Athletic",
                 url: "https://www.nytimes.com",
-                description: "Lando Norris won a compelling British Grand Prix in horrendous conditions at Silverstone, with McLaren securing a strong team result."[](https://nytimes.com/athletic/live-blogs/f1-british-gp-live-updates-race-times-results/7sxnVCmwA6ug/b9BcIVnF8Q46)
+                description: "Lando Norris won a compelling British Grand Prix in horrendous conditions at Silverstone, with McLaren securing a strong team result."
             },
             {
                 title: "Sauber Climbs to Sixth in Constructors' Championship",
                 source: "BBC Sport",
                 url: "https://www.bbc.com",
-                description: "Sauber's recent performance surge, led by Nico Hulkenberg, has seen them become the fourth-highest scoring team since Spain."[](https://www.bbc.com/sport/formula1/articles/cgmwp1yjr41o)
+                description: "Sauber's recent performance surge, led by Nico Hulkenberg, has seen them become the fourth-highest scoring team since Spain."
             },
             {
                 title: "Williams Targets Points at British Grand Prix",
                 source: "F1 Oversteer",
                 url: "https://www.f1oversteer.com",
-                description: "Alex Albon finished P8 in a rain-soaked Silverstone, boosting Williams' midfield battle."[](https://www.f1oversteer.com/)
+                description: "Alex Albon finished P8 in a rain-soaked Silverstone, boosting Williams' midfield battle."
             }
         ];
 
@@ -285,6 +275,94 @@
             `;
         }
 
+        // Fallback driver standings data
+        const fallbackStandings = [
+            { position: 1, driver: "Oscar Piastri", team: "McLaren", points: 250 },
+            { position: 2, driver: "Lando Norris", team: "McLaren", points: 242 },
+            { position: 3, driver: "Max Verstappen", team: "Red Bull", points: 180 },
+            { position: 4, driver: "Charles Leclerc", team: "Ferrari", points: 160 },
+            { position: 5, driver: "Lewis Hamilton", team: "Mercedes", points: 150 }
+        ];
+
+        // Fetch driver standings from F1-Standings-API
+        async function fetchStandings() {
+            const standingsContainer = document.getElementById('standings-data');
+            standingsContainer.innerHTML = '<p>Loading driver standings...</p>';
+            try {
+                const response = await fetch('https://f1-standings-api-7dc0b6ed1098.herokuapp.com/api/f1/driver-standings', {
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}, Message: ${await response.text()}`);
+                }
+                const standings = await response.json();
+                if (!standings || standings.length === 0) {
+                    throw new Error('Empty or invalid response from API');
+                }
+                let html = `
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th>Driver</th>
+                                <th>Team</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+                standings.forEach(driver => {
+                    html += `
+                        <tr>
+                            <td>${driver.position}</td>
+                            <td>${driver.driver}</td>
+                            <td>${driver.team}</td>
+                            <td>${driver.points}</td>
+                        </tr>
+                    `;
+                });
+                html += `
+                        </tbody>
+                    </table>
+                    <p><em>Data sourced from the official Formula 1 website via F1-Standings-API.</em></p>
+                `;
+                standingsContainer.innerHTML = html;
+            } catch (error) {
+                console.error('Error fetching standings:', error.message);
+                // Use fallback data
+                let html = `
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th>Driver</th>
+                                <th>Team</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+                fallbackStandings.forEach(driver => {
+                    html += `
+                        <tr>
+                            <td>${driver.position}</td>
+                            <td>${driver.driver}</td>
+                            <td>${driver.team}</td>
+                            <td>${driver.points}</td>
+                        </tr>
+                    `;
+                });
+                html += `
+                        </tbody>
+                    </table>
+                    <p><em>API unavailable. Displaying sample data. Please try again later.</em></p>
+                `;
+                standingsContainer.innerHTML = html;
+            }
+        }
+
         // Form submission
         document.querySelector('.signup-form').addEventListener('submit', (e) => {
             e.preventDefault();
@@ -292,8 +370,13 @@
         });
 
         // Initialize page
-        displayNews();
-        loadXFeed();
+        function initializePage() {
+            displayNews();
+            loadXFeed();
+            fetchStandings();
+        }
+
+        window.onload = initializePage;
     </script>
 </body>
 </html>
